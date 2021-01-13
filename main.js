@@ -57,23 +57,31 @@ function displayError(error) {
 function heartComment(resultat) { 
   console.log("im in heartComment");
   console.log(resultat);
-}
+};
 
 
+
+// calling event.target in mimicServerCall() will work. 
+//you can refer to the element and change its contents. 
 
 //------------------------------------------------------------------------------
 // Ignore after this point. Used only for demo purposes
 //------------------------------------------------------------------------------
 
-function mimicServerCall(url="http://mimicServer.example.com", config={}) {
-  return new Promise(function(resolve, reject) {
-    setTimeout(function() {
-      let isRandomFailure = Math.random() < .2
-      if (isRandomFailure) {
-        reject("Random server error. Try again.");
-      } else {
-        resolve("Pretend remote server notified of action!");
-      }
-    }, 300);
-  });
-}
+// function mimicServerCall(url="http://mimicServer.example.com", config={}) {
+//   return new Promise(function(resolve, reject) {
+//     setTimeout(function() {
+//       let isRandomFailure = Math.random() < .2
+//       if (isRandomFailure) {
+//         reject("Random server error. Try again.");
+//       } else {
+//         resolve("Pretend remote server notified of action!");
+//       }
+//     }, 300);
+//   });
+// }
+
+
+// so what do we want for the like button?
+
+// each button is fitted with an event listener.
